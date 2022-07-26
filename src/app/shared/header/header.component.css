@@ -1,0 +1,37 @@
+.navbar-one ul, i, span{
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+     color:rgb(52, 17, 166); 
+    
+
+ }
+ .navbar-one li{
+     padding: 10px;
+ }
+
+.navbar-one{
+    display: flex;
+    justify-content:space-around;
+    background-color: rgb(194, 41, 166);
+}
+.navbar-one ul li{
+    color: antiquewhite;
+    
+}   
+
+.navbar{
+    background-color:grey;
+}
+.navbar ul li{
+    color:aliceblue; 
+    
+}
+.right{
+    float:left;
+    display: flex;
+}
+.navbar-nav a{
+     font-size: 20px;
+     color:rgb(31, 230, 71); 
+} 

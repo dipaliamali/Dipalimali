@@ -1,0 +1,81 @@
+
+
+ 
+ <div class="container mt-5">
+    <div class="head1">
+        <h2>Contact</h2>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.453845774946!2d73.81448411489184!3d18.46309058744252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2956a20fbac17%3A0x91987f7033fd2e3c!2sAbhiruchi%20mall%20%26%20multiplex!5e0!3m2!1sen!2sin!4v1642589326819!5m2!1sen!2sin" width="560" height="315" style="border:1;" allowfullscreen="" loading="lazy">
+    </iframe> 
+    </div>
+</div>
+ 
+<div class="container mt-5 mb-5">
+    <div class="row">
+    <div class="col-md-8">
+    <h3>GET IN TOUCH WITH US</h3>
+    <div class="form-wrap mt-3">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmitForm()">
+            <div class="form-group">
+                <label>First Name: <span style="color: red;">*</span> </label>
+                <input type="text" class ="form-control" formControlName="fname"
+                required [ngClass]="{'is-invalid': isSubmitted && f.fname.errors}"
+                 placeholder="First Name is required" >
+                <div *ngIf="isSubmitted && f.fname.errors?.required" class="invalid-feedback">First name is required</div>
+            </div>
+
+            <div class="form-group">
+                <label>Last Name: <span style="color: red;">*</span> </label>
+                <input type="text" class ="form-control" formControlName="lname"
+                required [ngClass]="{'is-invalid': isSubmitted && f.lname.errors}"
+                placeholder="Last Name is required">
+                <div *ngIf="isSubmitted && f.lname.errors?.required" class="invalid-feedback">Last Name is required</div>
+            </div>
+    
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="text" class ="form-control" formControlName="email"
+                required [ngClass]="{'is-invalid': isSubmitted && f.email.errors}"
+                placeholder="Email is required" >
+                <div *ngIf="isSubmitted && f.email.errors?.required" class="invalid-feedback">Email is required</div>
+                <div *ngIf="isSubmitted && f.email.errors?.pattern" class="invalid-feedback">Please Enter valid email.</div>
+            </div>
+
+            <div class="form-group">
+                <label>phone no:</label>
+                <input type="number" class="form-control" formControlName="phone"
+                required [ngClass]="{'is-invalid' :isSubmitted && f.phone.errors}"
+                placeholder="phone no is required">
+           </div>
+            <button class="btn btn-info mt-3">Send Message</button>
+            
+
+    </form>
+    </div>
+    </div>
+    <div class="col-md-4">
+            <div class="d1">
+                <h3>NEED HELP</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur architecto 
+                    harum perferendis dignissimos, 
+                    ad pariatur beatae amet excepturi laborum maxime.
+                    harum perferendis dignissimos, 
+                    ad pariatur beatae amet excepturi laborum maxime.
+                </p>
+                <ul>
+                    <li><i class="pi pi-phone">
+                      <span>+91 7845562312</span>
+                    </i></li>
+                    <li>
+                        <i class="pi pi-envelope">
+                          <span>construction@gmail.com</span>
+                        </i></li>
+                    </ul>
+            </div>
+    </div>
+    </div>   
+    </div>
